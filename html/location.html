@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="google" content="notranslate">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Heineken SilVer">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=6.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Heineken SilVer</title>
+  <meta name="description" content="Heineken SilVer">
+  <meta name="keywords" content="Heineken SilVer">
+  <meta property="og:title" content="Heineken SilVer">
+  <meta property="og:description" content="Heineken SilVer">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/social-sharing-video.jpg">
+  <meta property="og:site_name" content="Heineken SilVer">
+  <meta property="og:url" content="location.html">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Heineken SilVer" />
+  <meta name="theme-color" content="#ffc72c">
+  <link rel="icon" href="images/favicon.ico">
+
+  <link href="css/styles.css" rel="stylesheet" rel="preload" as="style">
+
+</head>
+
+<body data-page="location">
+
+  <div class="section section-full">
+
+    <div class="pic-full pic">
+      <img src="images/mockup.png" alt="pic" />
+    </div>
+
+    <div class="inr-full">
+
+      <div class="inr-detail location">
+        <div class="select district__select">
+          <div class="select-header">
+            <input type="text" class="selec-input" placeholder="Săn Kencoin tại..." value="">
+          </div>
+          <div class="select-box">
+            <ul>
+              <li data-value="1">Phường 9, Phú Nhuận</li>
+              <li data-value="2">Phường 9, Tân Bình</li>
+              <li data-value="3">Phường 9, Gò Vấp</li>
+              <li data-value="4">Phường 9, Quận 5</li>
+              <li data-value="5">Phường 9, Quận 10</li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="but but-listview"><span>List view</span></button>
+        <div class="location-map" id="map"></div>
+        <div class="store-box">
+          <h2>Danh sách</h2>
+          <div class="store-list">
+            <div class="store-item">
+              <div class="store-pic pic"><img src="images/store.png" alt="Store Name" /></div>
+              <div class="store-info">
+                <h3>Store Name</h3>
+                <div class="store-brief">Address</div>
+                <div class="store-description">
+                  Description
+                </div>
+                <div class="store-status">Active</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="warning-slogan"><img src="images/warning-slogan.png" alt="Người dưới 18 tuổi không được uống rượu bia" />
+  </div>
+
+
+  <!--script-->
+  <script src="js/common.js"></script>
+  <script src="js/jquery-min.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3d9nAkhQgjqlGlWx3SQz5lkQmEmbIDIc&region=VN&language=vi&callback=initMap"></script>
+  <!--/script-->
+
+</body>
+
+</html>

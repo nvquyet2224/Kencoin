@@ -1,0 +1,346 @@
+/*Popup*/
+
+.popup, .popup__survey {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: opacity 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+    transition: opacity 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+    z-index: 13;
+}
+
+
+.popup.show, .popup__survey.show {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 0s, 0s;
+    transition-delay: 0s, 0s
+}
+
+.popup__inr {
+    position: relative;
+    display: block;
+    width: 88.5333%;
+    height: auto;
+    max-width: 332px;
+    background-color: #fff;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+}
+.popup__tnc .popup__inr{
+    max-width:800px;
+    height:90%;
+    overflow:hidden;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:5% 0;
+}
+.tnc__content {
+    width:100%;
+    padding:0 5%;
+}
+.popup__tnc .close-popup {
+    top:3%;
+    right:5%;
+}
+.tnc__content h2{
+    font-size:24px;
+    color:#6F481D;
+    font-weight:800;
+    margin-bottom:20px;
+    line-height:32px;
+}
+.tnc__content {
+    font-size:14px;
+    font-weight:normal;
+    color:#222222;
+    line-height:18px;
+}
+.tnc__content p {
+    margin-bottom:20px;
+}
+
+.close-popup, .close-popup-survey {
+    position: absolute;
+    top: 8%;
+    right: 7%;
+    width: 18px;
+    height: 18px;
+    background: url(../images/icon__close_popup.png) no-repeat center center;
+    background-size: 100% auto;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.close-popup-survey{
+    top: 4%;
+    right: 4%;
+}
+
+.modal__tnc{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: opacity 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+    transition: opacity 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+    z-index: 13;
+}
+
+.modal__tnc.show {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 0s, 0s;
+    transition-delay: 0s, 0s
+}
+
+.modal__inr {
+    position: relative;
+    display: block;
+    width: 95%;
+    height: 80%;
+    max-width: 332px;
+    background-color: #fff;
+    margin-top: 7%;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+
+}
+
+.close-modal {
+    position: absolute;
+    top: 4%;
+    right: 7%;
+    width: 18px;
+    height: 18px;
+    background: url(../images/icon__close_popup.png) no-repeat center center;
+    background-size: 100% auto;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.box__warning {
+    position: relative;
+    padding: 40px 17px 40px 17px;
+}
+
+.pic__warning {
+    width: 15.333%;
+    margin: 0 auto 46px auto;
+}
+
+.txt__warning {
+    position: relative;
+    text-align: center;
+}
+
+.txt__warning p {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.ncf .txt__warning p {
+    color: #6F481D;
+}
+
+.nin .txt__warning p {
+    color: #01A7E1;
+}
+
+.modal__tnc .fs__box{
+    position: relative;
+    display: block;
+    padding: 40px 15px 15px 15px;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.title__tnc{
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+.content__tnc{
+    font-size: 14px;
+    line-height: 18px;
+    color: #222222;
+}
+.content__tnc p{
+   margin-bottom: 20px;
+}
+
+.ncf .title__tnc{
+    color: #E40A0A;
+}
+
+.nin .title__tnc{
+    color: #01A7E1;
+}
+
+.popup__game .txt__warning p {
+    color:#6F481D;
+    font-weight:800;
+    margin-bottom:30px;
+}
+
+
+/* pop__survey */
+.pop__survey{
+    max-width: 680px;
+    width: 90%;
+}
+.box__gift__survey{
+    position: relative;
+    padding: 60px;
+    text-align: center;
+}
+.title__popup--survey{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #0033A0;
+    margin-bottom: 20px;
+}
+.brief__gifts{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: #01A7E1;
+    margin-bottom: 40px;
+}
+.pic__gifts--survey{
+    position: relative;
+    width: 68%;
+    margin: 0 auto;
+}
+.code__voucher{
+    position: absolute;
+    top: 13%;
+    right: 22%;
+    text-align: left;
+}
+.value__voucher{
+    position: absolute;
+    bottom: 25%;
+    right: 19%;
+    text-align: left;
+}
+.date__voucher{
+    position: absolute;
+    right: -4%;
+    top: 34%;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.title__code{
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1;
+    color: #666666;
+    margin-bottom: 2px;
+}
+.value__code{
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #48A6DB;
+}
+.value__code sub{
+    font-size: 55%;
+    margin-left: -3%;
+}
+.date__code{
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+}
+.date__code span{
+    font-weight: 900;
+}
+.box__gift__survey .buts{
+    display: flex;
+    justify-content: center;
+}
+.box__gift__survey .buts .btn{
+    flex: 0 0 140px;
+    max-width: 140px;
+    margin: 0 5px;
+}
+
+
+
+@media screen and (max-width:350px) {
+    .txt__warning p {
+        font-size:20px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .box__gift__survey {
+        padding: 60px 15px;
+    }
+    .title__popup--survey {
+        font-size: 25px;
+    }
+    .brief__gifts {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .pic__gifts--survey {
+        width: 100%;
+    }
+    .title__code {
+        font-size: 13px;
+    }
+    .value__code {
+        font-size: 18px;
+    }
+    .date__code {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .title__code {
+        font-size: 12px;
+    }
+    .value__code {
+        font-size: 17px;
+    }
+    .date__code {
+        font-size: 13px;
+    }
+}
+
+@media (orientation:landscape) and (max-width:840px) {}
+
+@media (orientation:landscape) and (max-width:840px) {}
