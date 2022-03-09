@@ -45,7 +45,7 @@ function optimizeFullScreen() {
     winW = window.innerWidth;
     innerH = winW > winH ? winW : winH;
     [].slice.call(document.querySelectorAll('.section-full')).forEach(function (elm) {
-        //elm.style.height = innerH + 'px';
+        elm.style.height = innerH + 'px';
     });
 }
 

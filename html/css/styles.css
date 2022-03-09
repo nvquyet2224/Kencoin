@@ -11,17 +11,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display:block;
 }
 
+
 @font-face {
-    font-family:'Nunito Sans';
-    src:url('../fonts/NunitoSans-Black.woff2') format('woff2'), url('../fonts/NunitoSans-Black.woff') format('woff'), url('../fonts/NunitoSans-Black.ttf') format('truetype');
-    font-weight:900;
+    font-family:'Roboto';
+    src:url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight:400;
     font-style:normal;
     font-display:swap;
 }
 
+@font-face {
+    font-family:'Roboto';
+    src:url('../fonts/Roboto-Medium.ttf') format('woff2'),
+        url('../fonts/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight:500;
+    font-style:normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family:'Roboto';
+    src:url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight:700;
+    font-style:normal;
+    font-display:swap;
+}
+
+
 html, body {
     background:#fff;
-    font-family:'Nunito Sans', sans-serif;
+    font-family:'Roboto';
+    font-weight:400;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
 }
@@ -86,7 +111,6 @@ input, button {
     height:auto;
 }
 
-/*
 .section-full {
     overflow:hidden;
 }
@@ -96,28 +120,342 @@ input, button {
     width:100%;
     height:100%;
 }
-
 .pic-full img {
+    width:100%;
     height:100%;
-    width:auto;
-    margin:0 -50%;
+    -webkit-object-fit:cover;
+    object-fit:cover;
 }
-.inr-full {
+
+.warning-slogan {
+    position:absolute;
+    left:0;
+    bottom:2.2vh;
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:center;
+    z-index:3;
+}
+.warning-slogan img {
+    width:87.73333%;
+}
+
+
+.inr-full,
+.step {
     position:absolute;
     left:0;
     top:0;
     width:100%;
     height:100%;
 }
-*/
 
-.input-txt {
+
+.logo {
     width:100%;
-    height:40px;
-    line-height:38px;
-    border:1px solid #000;
+    height:auto;
+}
+.logo a {
+    display:block;
+    width:149px;
+    margin:0 auto;
 }
 
+
+/*Input*/
+.form-control {
+    margin-bottom:16px;
+}
+.input-txt {
+    width:100%;
+    max-width:300px;
+    height:42px;
+    padding:3px 40px;
+    background:url(../images/input-txt-bg.png) no-repeat center center;
+    background-size:100% auto;
+    font-size:15px;
+    font-family:'Roboto';
+    font-weight:500;
+    color:#08853a;
+}
+.input-txt::placeholder,
+.select-input::placeholder,
+.area-txt::placeholder {
+    color:#808080;
+}
+.input-txt:-ms-input-placeholder,
+.select-input:-ms-input-placeholder,
+.area-txt:-ms-input-placeholder {
+    color:#808080;
+}
+.input-txt::-moz-placeholder,
+.select-input::-moz-placeholder,
+.area-txt::-moz-placeholder {
+    color:#808080;
+    opacity:1;
+}
+
+
+.control-error {
+    padding:3px 10px 0 10px;
+    font-size:12px;
+    color:#f00;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:none;
+}
+.show-error .control-error {
+    display:block;
+}
+
+
+.check-item {
+    display:flex;
+}
+.check-input {
+    position:relative;
+    width:19px;
+    height:19px;
+}
+
+.check-input::before {
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    -webkit-filter:grayscale(1);
+    filter:grayscale(1);
+}
+
+/*
+.check-input::before,
+.check-input::after {
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    -webkit-transition:opacity 0.3s ease-in-out;
+    transition:opacity 0.3s ease-in-out;
+}
+.check-input::before {
+    background:url(../images/check-grey.png) no-repeat center center;
+    background-size:100% auto;
+}
+.check-input::after {
+    background:url(../images/check-green.png) no-repeat center center;
+    background-size:100% auto;
+    opacity:0;
+}
+.check-input:checked::before {
+    opacity:0;
+}
+.check-input:checked::after {
+    opacity:1;
+}
+*/
+
+.check-input::before {
+    background:url(../images/check-green.png) no-repeat center center;
+    background-size:100% auto;
+}
+.check-input:checked::before {
+    -webkit-filter:grayscale(0);
+    filter:grayscale(0);
+}
+
+.check-item label {
+    font-weight:500;
+    padding-left:10px;
+}
+
+.type-square .check-input::before {
+    background:url(../images/check-green-square.png) no-repeat center center;
+    background-size:100% auto;
+}
+
+
+
+/*Button*/
+.buts{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.but {
+    width:100%;
+    height:43px;
+    max-width:218px;
+    background:url(../images/button-bg-green.png) no-repeat center center;
+    background-size:100% auto;
+    text-align:center;
+}
+.but span {
+    position:relative;
+    z-index:3;
+    font-weight:500;
+    font-size:15px;
+    color:#08853a;
+}
+
+.but-age {
+    
+}
+.but-age  span {
+    color:#fff;
+    font-weight:700;
+    font-size:18px;
+}
+
+
+
+/*link*/
+.link {
+    font-weight:500;
+    font-size:15px;
+    color:#08853a;
+    text-decoration:none;
+}
+.link-forgot {
+    padding:14px 5px;
+}
+
+
+
+/*Age Gate*/
+.age-gate {
+    display:flex;
+    flex-wrap:wrap;
+    align-content:center;
+    justify-content:center;
+    padding-bottom:40px;
+}
+.age-pic {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:18px;
+}
+.age-pic img {
+    width:260px;
+}
+.age-gate .check-item label  {
+    font-size:15px;
+    color:#fff;
+}
+.age-box {
+    width:218px;
+}
+.age-select,
+.age-box .check-list {
+    width:100%;
+}
+.age-select .but {
+    margin-bottom:10px;
+}
+.age-box .check-list {
+    padding-top:30px;
+}
+.age-box .check-item {
+    margin-bottom:15px;
+    align-items:center;
+}
+.age-box .check-input::before {
+    -webkit-filter:grayscale(0);
+    filter:grayscale(0);
+}
+
+
+
+/*Valid Password list*/
+.passord-valid__list{
+    padding-top:20px;
+}
+.passord-valid__item {
+    position:relative;
+    font-weight:500;
+    font-size:13px;
+    color:#000;
+    min-height:19px;
+    margin-bottom:12px;
+    padding-left:30px;
+    padding-top:4px;
+}
+.passord-valid__item::before,
+.passord-valid__item::after {
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    width:19px;
+    height:19px;
+    -webkit-transition:opacity 0.3s ease-in-out;
+    transition:opacity 0.3s ease-in-out;
+    
+}
+.passord-valid__item::before {
+    background:url(../images/check-grey.png) no-repeat center center;
+    background-size:100% auto;
+}
+.passord-valid__item::after {
+    background:url(../images/check-green.png) no-repeat center center;
+    background-size:100% auto;
+    opacity:0;
+}
+.passord-valid__item.valid::before {
+    opacity:0;
+}
+.passord-valid__item.valid::after {
+    opacity:1;
+}
+
+
+/*Sign up*/
+.signup, .login {
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    padding-bottom:40px;
+    background:url(../images/mash-bg.jpg) no-repeat center top;
+    background-color:#fff;
+}
+.signup .inr-detail,
+.login .inr-detail {
+    width:100%;
+}
+.signup .form-box,
+.login .form-box {
+    width:300px;
+    margin:0 auto;
+    padding-top:36px;
+}
+.login-help {
+    position:absolute;
+    left:0;
+    bottom:16px;
+    width:100%;
+    height:auto;
+    z-index:3;
+}
+.login-help p {
+    font-size:20px;
+    font-weight:500;
+    color:#808080;
+    text-align:center;
+}
+.login-help p a{
+    color:#08853a;
+    text-decoration:none;
+}
+
+.login .check-list {
+    margin-bottom:20px;
+}
 
 
 /*Title*/
@@ -134,46 +472,6 @@ input[type=number] {
 }
 
 
-/*Button*/
-.but {
-    --box-border--border: linear-gradient(105deg, rgb(255 46 144) 0%, rgb(61 35 185) 100%);
-    --box--border__top-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='1' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='2' /></svg>");
-    --box--border__top: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='1' x2='101' y2='1' stroke='%23000' stroke-width='2'/></svg>");
-    --box--border__top-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='1' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='2' /></svg>");
-    --box--border__left: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='1' y1='-1' x2='1' y2='101' stroke='%23000' stroke-width='2'/></svg>");
-    --box--border__right: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='10' height='100' viewBox='0 0 10 100' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='9' y1='-1' x2='9' y2='101' stroke='%23000' stroke-width='2'/></svg>");
-    --box--border__bottom-left: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='1' y='-9' width='18' height='18' rx='4' ry='4' stroke='%23000' stroke-width='2' /></svg>");
-    --box--border__bottom: url("data:image/svg+xml,<svg preserveAspectRatio='none' width='100' height='10' viewBox='0 0 100 10' fill='none' xmlns='http://www.w3.org/2000/svg'><line x1='-1' y1='9' x2='101' y2='9' stroke='%23000' stroke-width='2'/></svg>");
-    --box--border__bottom-right: url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='-9' y='-9' width='18' height='18' rx='4' ry='4' stroke='black' stroke-width='2' /></svg>");
-    
-    padding: 1rem;
-    position: relative;
-    /* resize: both; */
-    overflow: hidden;
-    font-weight: 700;
-    width: 100%;
-    max-width: 30ch;
-}
-.but::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--box-border--border);
-    mask:
-      var(--box--border__top-left) 0 0 / .625rem .625rem,
-      var(--box--border__top) .625rem 0 / calc(100% - 1.25rem) .625rem,
-      var(--box--border__top-right) 100% 0 / .625rem .625rem,
-      var(--box--border__left) 0 .625rem / .625rem calc(100% - 1.25rem),
-      var(--box--border__right) 100% .625rem / .625rem calc(100% - 1.25rem),
-      var(--box--border__bottom-left) 0 100% / .625rem .625rem,
-      var(--box--border__bottom) .625rem 100% / calc(100% - 1.25rem) .625rem,
-      var(--box--border__bottom-right) 100% 100% / .625rem .625rem;
-    mask-repeat: no-repeat;
-}
-
 @media screen and (min-width:841px) and (max-width:1440px){
 }
 
@@ -182,7 +480,15 @@ input[type=number] {
 
 }
 
-@media (orientation:landscape) and (max-width:900px), (min-width:1020px) {
+@media (min-width:1020px) {
+    .section-full {
+        width:375px;
+        height:100vh !important;
+    }
+}
+
+
+@media (orientation:landscape) and (max-width:900px) {
     .section-full {
         height:auto !important;
     }

@@ -34,20 +34,18 @@
 
   <div class="section section-full">
 
-    <div class="pic-full pic">
-      <img src="images/mockup.png" alt="pic" />
-    </div>
+    <div class="inr-full signup">
 
-    <div class="inr-full">
+      <div class="inr-detail">
 
-      <div class="inr-detail signup">
-
-        <div class="logo pic"><img src="images/logo-grey.png" alt="Heineken Silver" /></div>
+        <div class="logo">
+          <a class="pic" href="/"><img width="149" height="104" src="images/logo-grey.png" alt="Heineken Silver" /></a>
+        </div>
 
         <div class="form-box">
           <form accept="#">
 
-            <div class="form-control">
+            <div class="form-control show-error">
               <input type="text" id="Username" name="Username" class="input-txt"
                 placeholder="Số điện thoại hoặc địa chỉ email" autocomplete="off">
               <div class="control-error">Message error demo</div>
@@ -58,14 +56,9 @@
                 placeholder="Mật khẩu" autocomplete="off">
               <div class="passord-valid">
                 <ul class="passord-valid__list">
-                  <li id="valid-length">
-                    <img class="valid-icon"><img src="images/check.png" alt="icon check">
-                    <span>Ít nhất 8 kí tự</span>
-                  </li>
-                  <li id="valid-characters">
-                    <img class="valid-icon"><img src="images/check.png" alt="icon check">
-                    <span>Ít nhất 3 trong số 4 kí tự phải có: chữ in hoa, chữ thường, số, kí tự đặc biệt</span>
-                  </li>
+                  <li class="passord-valid__item valid" id="valid-length">Ít nhất 8 kí tự</li>
+                  <li class="passord-valid__item" id="valid-characters">Ít nhất 3 trong số 4 kí tự phải có: chữ in hoa,
+                    chữ thường, số, kí tự đặc biệt</li>
                 </ul>
               </div>
             </div>
@@ -83,26 +76,16 @@
           </form>
         </div>
 
-        <div class="login-social">
-          <div class="login-social__cap"><span>Đăng nhập với</span></div>
-          <div class="login-social__list">
-            <a href="#"><img src="images/facebbook-icon.png" alt="facebook" /></a>
-            <a href="#"><img src="images/google-icon.png" alt="google" /></a>
-          </div>
-        </div>
+      </div>
 
-        <div class="login-help">
-          <p>Bạn đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
-        </div>
-
+      <div class="login-help">
+        <p>Bạn đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
       </div>
 
     </div>
 
   </div>
 
-  <div class="warning-slogan"><img src="images/warning-slogan.png" alt="Người dưới 18 tuổi không được uống rượu bia" />
-  </div>
 
   <!--script-->
   <script src="js/common.js"></script>

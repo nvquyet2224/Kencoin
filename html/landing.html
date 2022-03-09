@@ -35,35 +35,39 @@
   <div class="section section-full">
 
     <div class="pic-full pic">
-      <img src="images/mockup.png" alt="pic" />
+      <img width="375" height="635" src="images/landing-kv.jpg" alt="Bạn đã đủ 18 tuổi ?" />
     </div>
 
     <div class="inr-full welcome-steps">
 
-      <div class="step landing active">
-        <div class="logo pic"><img src="images/logo-white.png" alt="Heineken Silver" /></div>
+      <!-- <div class="step landing active">
+        <div class="logo">
+          <a class="pic" href="/"><img width="149" height="104" src="images/logo-white.png" alt="Heineken Silver" /></a>
+        </div>
         <div class="landing-pic pic"><img src="images/landing.png" alt="landing" /></div>
         <div class="buts">
           <button type="button" class="but but-startnow" id="btnStartnow"><span>Chơi luôn !</span></button>
         </div>
-      </div>
+      </div> -->
 
       <div class="step age-gate">
-        <div class="logo pic"><img src="images/logo-white.png" alt="Heineken Silver" /></div>
-        <div class="age-pic pic"><img src="images/age.png" alt="landing" /></div>
+        <div class="logo">
+          <a class="pic" href="/"><img width="149" height="104" src="images/logo-white.png" alt="Heineken Silver" /></a>
+        </div>
+        <div class="age-pic pic"><img width="260" height="168" src="images/ban-da-du-18-chua.png" alt="bạn đã đủ 18 chửa?" /></div>
         <div class="age-box">
-          <div class="buts">
+          <div class="buts age-select">
             <button type="button" class="but but-age" id="btnOver18"><span>Em dư 18</span></button>
             <button type="button" class="but but-age" id="btnUnder18"><span>Em chưa 18</span></button>
           </div>
           <div class="check-list">
             <div class="check-item">
-              <input type="checkbox" id="chkRule" name="chkRule" checked>
-              <label>Điều khoản và quy định</label>
+              <input type="checkbox" id="chkRule" name="chkRule" class="check-input" checked>
+              <label for="chkRule">Điều khoản và quy định</label>
             </div>
             <div class="check-item">
-              <input type="checkbox" id="chkCookie" name="chkCookie" checked>
-              <label>Chính sách cookie</label>
+              <input type="checkbox" id="chkCookie" name="chkCookie" class="check-input" checked>
+              <label for="chkCookie">Chính sách cookie</label>
             </div>
           </div>
         </div>
@@ -71,10 +75,12 @@
 
     </div>
 
+    <div class="warning-slogan pic"><img width="329" height="25" src="images/warning-slogan.png" alt="Người dưới 18 tuổi không được uống rượu bia" />
+    </div>
+    
   </div>
 
-  <div class="warning-slogan"><img src="images/warning-slogan.png" alt="Người dưới 18 tuổi không được uống rượu bia" />
-  </div>
+  
 
   <!--script-->
   <script src="js/common.js"></script>
